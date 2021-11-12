@@ -39,6 +39,7 @@ void division() {
     printf("Digite otro numero: \n");
     scanf("%i", &num2);
     printf("EL resultado de la division es: %i\n", num1 / num2);
+    printf("EL residuo de la division es: %i\n", num1 % num2);
 }
 
 void tablaMultiplicar() {
@@ -109,10 +110,11 @@ int main() {
         printf("----TABLAS DE MULTIPLICAR----\n");
         tablaMultiplicar();
     }
-    if (seleccionMenu <= 0 || seleccionMenu > 5) {
+    if (seleccionMenu <= 0 || seleccionMenu > 5 ) {
         printf("---------------------------------------------------------\n");
         printf("Seleccione una opcion valida\n");
         printf("---------------------------------------------------------\n");
+        puts("Prueba");
     }
 
 

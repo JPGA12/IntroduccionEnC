@@ -51,6 +51,31 @@ void tablaMultiplicar() {
     }
 }
 
+void pruebas() {
+
+    printf("[%020f]\n", PI);
+
+    int num;
+    printf("Digite un numero: ");
+    scanf("%d",&num);
+    fflush(stdin);
+    printf("EL numero %d en octal %o en exadecimal %x \n", num, num, num);
+
+
+
+    char name[30];
+    int age;
+
+    printf("Nombre....");
+    fgets(name, 30, stdin);
+
+
+    printf("Edad..");
+    scanf("%d", &age);
+
+    printf("HOla %s tienes %d años y eres %s de edad\n", name, age, age >= 18 ? "Mayor " : "Menor");
+}
+
 
 int main() {
 
@@ -86,7 +111,7 @@ int main() {
     //Entrada y salida  de datos -- Operaciones logicas
 
 
-    printf("Que desea hacer: \n1. Sumar \n2. Restar \n3. Multiplicar \n4. Dividir \n5. Tablas de multiplicacion \n");
+    printf("Que desea hacer: \n1. Sumar \n2. Restar \n3. Multiplicar \n4. Dividir \n5. Tablas de multiplicacion \n6. Pruebas de clase \n");
     scanf("%i", &seleccionMenu);
 
     if (seleccionMenu == 1) {
@@ -110,7 +135,11 @@ int main() {
         printf("----TABLAS DE MULTIPLICAR----\n");
         tablaMultiplicar();
     }
-    if (seleccionMenu <= 0 || seleccionMenu > 5 ) {
+    if (seleccionMenu == 6) {
+        printf("----EJEMPLOS DE CLASE----\n");
+        pruebas();
+    }
+    if (seleccionMenu <= 0 || seleccionMenu > 6) {
         printf("---------------------------------------------------------\n");
         printf("Seleccione una opcion valida\n");
         printf("---------------------------------------------------------\n");
